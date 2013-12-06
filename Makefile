@@ -41,7 +41,7 @@ $(SOURCE).pdf: $(SOURCE).ps
 bib: $(SOURCE).bbl
 $(SOURCE).bbl : $(SOURCE).bib
 	TEXINPUTS="./styles:" latex $(SOURCE).tex
-#	BSTINPUTS="./styles:" bibtex $(SOURCE)
+	BSTINPUTS="./styles:" bibtex $(SOURCE)
 
 report: $(SOURCE).pdf
 	pdffonts $< > fonts.log
