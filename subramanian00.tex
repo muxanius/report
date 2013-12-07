@@ -1,0 +1,40 @@
+\subsection{An architecture for building self-configurable systems}
+
+In the paper authors focused on the self-organizing architecture for WSNs and
+proposed components necessary for building such an architecture. The latter
+implies following components:
+\begin{itemize}
+\item \emph{Specialized sensors} for monitoring different physical entities.
+\item \emph{Routing sensors} provide a data dissimation and fault tolerance of the network.
+\item \emph{Aggregator nodes} can be either routing or spezialized or both nodes.
+\item \emph{Sink nodes} have a high storage capacity, store and process received data.
+\end{itemize}
+All the components mentioned above are sufficient for building a wide range of
+applications, where infrastructure consists of addressing, routing, broadcasting
+and multicasting mechanisms.
+
+Given the proposed architectural components, author also propose an algorithm
+that helps network to self-organize. There are four steps, which should be
+performed by the network:
+\begin{itemize}
+\item \emph{Discovery phase.} Each node discovers its neighbors.
+\item \emph{Organizational phase.} Nodes are organizing groups, allocate
+addresses, build routing table and construct broadcast tree and graph spanning
+all nodes.
+\item \emph{Maintenance phase.} Each node keeps track of its energy, constantly
+updates routing table, broadcast trees and graphs, sends \emph{I am alive}
+message and routing table to its neighbors.
+\item \emph{Self-Reorganization phase.} If node detects the failure of its
+neighbor, it updates its routing table, or starts \emph{Discovery phase} in case
+of the failure of all of the neighbors.
+\end{itemize}
+
+The analysis of the approach shows that the hierarchy of the network is strictly
+balanced; the complexity the routing is \emph{O(}log~\emph{n)}; the network is
+extremely tolerant to either node or ling failures; the uniqueness property is
+guaranteed by the presence of a hierarchy; specialized sensors are allowed to be
+mobile. There are several weaknesses of the approach, though. Thereby,
+the approach is not optimized for extremely dynamic systems, when the network
+changes badly or very fast. On the other hand, the required protocol for such
+networks is not discussed. Despite the specialized sensors can be mobile, they
+can not move beyond routers' reach. The latter, however are considered static.
