@@ -1,0 +1,31 @@
+\subsubsection{Proactive Reconfiguration of Wireless Sensor Networks}
+\label {ssec:proactive}
+
+Steine at \emph{al.} in \cite{sys:proactive} leverage on the exploitation of a
+design-time exploration, to identify a set of operating modes. At run-time the
+WSN can adapt its behavior to environmental conditions and QoS fluctuations,
+by reconfiguring itself into the most suitable operating mode.  The paper
+defines an \emph{operating mode} as a set of values assigned to some
+controllable parameters of the network protocols.
+The nodes can dynamically change, at run-time, their operating mode according to
+specific observable events, that potentially affect the QoS of the WSN. The
+events are detected using sensors and/or the current time of the day. This
+figures out a \emph{proactive} approach in the self-adaptive behavior.
+Concerning the network parameters, it is worth to distinguish between
+\emph{local} and \emph{global} parameters. In the former case, the single node
+can independently reconfigure itself without affecting the others. For instance,
+the tuning of the transmission power. In the latter, changing a global parameter
+necessarily requires a synchronization step, in order to maintain the proper
+functioning of the WSN. Example of global parameters are the TDMA slot-size and
+the sleep-time of the nodes.
+Thus, whenever a node detect an event, it can immediately adapt its local
+parameters or notify the other nodes about the need of change the current global
+mode.
+The authors have demonstrated the validity of the approach by testing it in a
+"cow-health" and a "office" monitoring scenarios. The evaluation metrics
+considered are the average delivery ratio and the average power consumption. In
+both the scenarios it has been experienced a significant reduction of power
+consumption, comparing the approach to a single configuration (worst-case) not
+adaptive design. This, keeping the packets delivery ratio close the values
+related to the worst-case based design.
+
