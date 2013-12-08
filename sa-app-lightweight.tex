@@ -1,0 +1,42 @@
+\subsubsection*{Supporting Lightweight Adaptations in Context-aware
+Wireless Sensor Networks}
+
+A common problem with WSN is to deploy an application, or update it, when the
+sensor network features a lot of nodes spread over a wide or region. As well,
+reprogramming a whole WSN deployed in a inaccessible region, represents a
+cumbersome, and often unfeasible, activity. Thus, the challenge is to support
+these operations in a feasible way, at the price of the lowest possible
+overhead.
+\\
+Apart from this issues, a typical requirement of applications like
+\emph{environmental monitoring} is to adapt the behavior of the nodes to the
+dynamics introduced by events, as for instance the presence or people moving
+around or not. 
+\\
+The work of Taherkordi et \emph{al.}\cite{app:taherkordi}, introduces the
+\texttt{WiSeKit} distributed middleware, along with the \texttt{ReWiSe} software
+component model, as a solution to support a lightweight behavioral adaptation of
+sensor networks. The \texttt{WiSeKit} middleware exposes the following services
+\begin{itemize}
+	\item \emph{Local Reasoning} to update the values of components’ parameters
+		based on a local adaptation policy.
+	\item \emph{Adaptation Proxy} to receive adaptation request from cluster
+		head.
+	\item \emph{Component Repository} to temporarily store a new component’s
+		image.
+	\item \emph{Component Reconfigurator} to load, reload or remove a running
+		component.
+\end{itemize}
+The \texttt{ReWiSe} component model considers the application as an integration
+of separate components. A component can be dynamically replaced, Reconfiguration
+in  WSN can be a very expensive operation, since it requires to transfer code to
+sensor nodes, to save and resume of state information, and eventually restart
+the sensor node. The main costs are paid in terms of \emph{energy consumption}
+and are proportional to the size of the code images to transfer. For this
+reason, the goal of this work has been to develop a software component model
+that i) enables the possibility of a fine-grained reconfiguration of the
+application, ii) reduce the overhead due to state saving.
+The framework has been implemented on top of the \texttt{Contiki} operating
+system. Preliminary experiments reported a decrease of energy consumption of
+about $75\%$, compared to a common software component model.
+
