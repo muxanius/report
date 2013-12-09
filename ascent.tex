@@ -1,6 +1,31 @@
-\subsection*{ASCENT: Adaptive Self-Configuring Sensor Networks Topologies}
-In \cite{ascent} the authors provide an other self-configuring approach in order to deploy micro-sensor for a wide range of environmental monitoring applications. They assumed a very-dense scenario where is extremely necessary to find a trade-off between the sensors' coverage and the interferences due to the large number of involved sensors. The real scenario given by that work is a habitat monitoring sensor network that is deployed in a remote forest, where the sensors are dropped by a plane.
-Different aspects are taken into account and then analysed: power consumption as well as the distributed sensing task. The work seems to be very interesting for two different reasons: first, adaptive techniques implied permit applications to configure the underlying topology based on their needs by trying to save energy and extend the network lifetime, second, the self-adaptive approach is based on the operating conditions measured locally.
-Specifically, the authors identify two kinds of sensors, namely nodes, in the network: \textit{i) active} and \textit{ii)} passive. The active nodes stay awake all the time and perform routing procedure, while the passive nodes listen the channel and periodically check if they should turn into active mode. The active nodes will be in charge of producing messages (sources) or just disseminating them (sink). In the case of low channel condition, the sink nodes could send an \textit{help message} to other passive node in order to activate them.
-The self-configuring process starts by turning on randomly some nodes in the network. Such nodes enter firstly in a test mode, where they can exchange data and routing control messages, so that after a prefixed time can be switched to an active mode. If there are too many neighbour nodes active, according to a fixed parameter, the node will be switched off. Afterwards, if the number of active neighbour nodes will be less than a prefixed parameter and the data loss rate good enough it will be re-activated. 
-Note that the performance of the system depend on the parameters chosen. The work provide a good validation for the parameters provided by analysing and comparing the network performance in terms of energy savings and network capacity. The gain of power saving is a factor of $3$ better in some dense cases.
+\subsubsection*{ASCENT: Adaptive Self-Configuring Sensor Networks Topologies}
+In \cite{ascent} the authors provide an other self-configuring approach in order
+to deploy micro-sensor for a wide range of environmental monitoring
+applications. They assumed a very-dense scenario where is extremely necessary to
+find a trade-off between the sensors' coverage and the interferences due to the
+large number of involved sensors. The real scenario given by that work is a
+habitat monitoring sensor network that is deployed in a remote forest, where the
+sensors are dropped by a plane.  Different aspects are taken into account and
+then analysed: power consumption as well as the distributed sensing task. The
+work seems to be very interesting for two different reasons: first, adaptive
+techniques implied permit applications to configure the underlying topology
+based on their needs by trying to save energy and extend the network lifetime,
+second, the self-adaptive approach is based on the operating conditions measured
+locally.  Specifically, the authors identify two kinds of sensors, namely nodes,
+in the network: \textit{i) active} and \textit{ii)} passive. The active nodes
+stay awake all the time and perform routing procedure, while the passive nodes
+listen the channel and periodically check if they should turn into active mode.
+The active nodes will be in charge of producing messages (sources) or just
+disseminating them (sink). In the case of low channel condition, the sink nodes
+could send an \textit{help message} to other passive node in order to activate
+them.  The self-configuring process starts by turning on randomly some nodes in
+the network. Such nodes enter firstly in a test mode, where they can exchange
+data and routing control messages, so that after a prefixed time can be switched
+to an active mode. If there are too many neighbour nodes active, according to a
+fixed parameter, the node will be switched off. Afterwards, if the number of
+active neighbour nodes will be less than a prefixed parameter and the data loss
+rate good enough it will be re-activated.  Note that the performance of the
+system depend on the parameters chosen. The work provide a good validation for
+the parameters provided by analysing and comparing the network performance in
+terms of energy savings and network capacity. The gain of power saving is a
+factor of $3$ better in some dense cases.
