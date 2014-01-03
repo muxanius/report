@@ -333,9 +333,10 @@
 % Read the url.sty source comments for usage information. Basically,
 % \url{my_url_here}.
 
+\usepackage{epsfig}
+\usepackage{epstopdf}
 
-
-
+\renewcommand{\baselinestretch}{0.99}
 
 % *** Do not adjust lengths that control margins, column widths, etc. ***
 % *** Do not use packages that alter fonts (such as pslatex).         ***
@@ -353,7 +354,6 @@
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
 \title{On the self adaptiveness in \\Wireless Sensor Networks}
-
 
 % author names and affiliations
 % use a multiple column layout for up to three different
@@ -410,7 +410,6 @@ vincenzo.sciancalepore@imdea.org}
 % make the title area
 \maketitle
 
-
 \begin{abstract}
 This work aims at providing a report, showing some noticeable example of
 self-configuration (or self-adaptation) approaches in the context of Wireless
@@ -424,11 +423,13 @@ of such systems.
 \IEEEpeerreviewmaketitle
 
 % Section I
+\vspace{-1mm}
 \section{Introduction}
 \label{sec:in}
 \input{introduction}
 
 % Section II
+\vspace{-1mm}
 \section{State of the Art}
 \label{sec:sa}
 In this section we group a set of relevant works focusing on the exploitation of
@@ -448,25 +449,29 @@ efficiency enhancement.
 
 
 
-
+\vspace{-1mm}
 \subsection{Architecture}
 \label{ssec:sa_arc}
 \input{architecture}
 
+\vspace{-1mm}
 \subsection{Application}
 \label{ssec:sa_app}
 \input{application}
 
+\vspace{-1mm}
 \subsection{System}
 \label{ssec:sa_sys}
 \input{system}
 
 
 % Section III
+\vspace{-1mm}
 \section{Evaluations}
 \label{sec:ev}
 \input{eval}
 
+\vspace{-1mm}
 \section{conclusions}
 \label{sec:conclusions}
 \input{conclusions}
