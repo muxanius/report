@@ -6,8 +6,9 @@ implies following components:
 
 \begin{itemize}
 \item \emph{Specialized sensors} for monitoring different physical entities.
-\item \emph{Routing sensors} provide a data dissimation and fault tolerance of the network.
-\item \emph{Aggregator nodes} can be either routing or spezialized or both nodes.
+\item \emph{Routing sensors} provide a data dissipation and fault tolerance of the network.
+\item \emph{Aggregator nodes} combine routing and sensor functionality to
+provide a better network flexibility.
 \item \emph{Sink nodes} have a high storage capacity, store and process received data.
 \end{itemize}
 All the components mentioned above are sufficient for building a wide range of
@@ -32,10 +33,15 @@ of the failure of all of the neighbors.
 
 The analysis of the approach shows that the hierarchy of the network is strictly
 balanced; the complexity of the routing is \emph{O(}log~\emph{n)}; the network is
-extremely tolerant to either node or ling failures; the uniqueness property is
+extremely tolerant to either node or link failures; the uniqueness property is
 guaranteed by the presence of a hierarchy; specialized sensors are allowed to be
 mobile. There are several weaknesses of the approach, though. Thereby,
 the approach is not optimized for extremely dynamic systems, when the network
 changes badly or very fast. On the other hand, the required protocol for such
 networks is not discussed. Despite the specialized sensors can be mobile, they
-can not move beyond routers' reach. The latter, however are considered static.
+can not move beyond the reach of routers. The latter, however are considered static.
+
+The approach is very well fitted for static WSN, such as one for collecting
+meteorological data. But it is absolutely not applicable for systems with high
+dynamics such as wildlife monitoring~\cite{Pasztor10}, since the network changes
+badly and rapidly.
