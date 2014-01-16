@@ -2,7 +2,7 @@
 In \cite{ascent} the authors provide an other self-configuring approach in order
 to deploy micro-sensor for a wide range of environmental monitoring
 applications. They assumed a very-dense scenario where is extremely necessary to
-find a trade-off between the sensors' coverage and the interferences due to the
+find a trade-off between the coverage and the interferences due to the
 large number of involved sensors. The real scenario given by that work is a
 habitat monitoring sensor network that is deployed in a remote forest, where the
 sensors are dropped by a plane.  Different aspects are taken into account and
@@ -21,11 +21,14 @@ could send an \textit{help message} to other passive node in order to activate
 them.  The self-configuring process starts by turning on randomly some nodes in
 the network. Such nodes enter firstly in a test mode, where they can exchange
 data and routing control messages, so that after a prefixed time can be switched
-to an active mode. If there are too many neighbour nodes active, according to a
+to an active mode. If there are too many neighbor nodes active, according to a
 fixed parameter, the node will be switched off. Afterwards, if the number of
-active neighbour nodes will be less than a prefixed parameter and the data loss
-rate good enough it will be re-activated.  Note that the performance of the
-system depend on the parameters chosen. The work provide a good validation for
-the parameters provided by analysing and comparing the network performance in
-terms of energy savings and network capacity. The gain of power saving is a
-factor of $3$ better in some dense cases.
+active neighbor nodes will be less than a prefixed parameter and the data loss
+rate greater than a predefined threshold, it will be re-activated.
+Note that the performance of the system depend on the value of the parameters
+above, e.g., loss threshold and neighbor threshold.
+
+The work provides a good validation for the parameters provided, by analyzing and
+comparing the network performance in terms of energy savings and network
+capacity. The gain of power saving is a factor of $3$ better in some dense
+cases.
